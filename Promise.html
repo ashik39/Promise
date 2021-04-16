@@ -1,0 +1,29 @@
+<script> 
+
+const onFulfillment = (result) => {
+    console.log(result)
+}
+
+const onRejection = (error) => {
+    console.log(error)
+}
+
+const promise = new Promise((resolve,reject) =>{
+    let x=0;
+
+    if(x == 0){
+        resolve('Resolved since it is true')
+    }
+    else{
+        reject('Rejected since it is false')
+    }
+})
+
+
+promise.then(onFulfillment,onRejection)
+//1st parameter calls function when promise gets true, 2nd parameter calls function when gets false
+
+
+
+
+</script>

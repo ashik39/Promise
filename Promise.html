@@ -9,7 +9,7 @@ const onRejection = (error) => {
 }
 
 const promise = new Promise((resolve,reject) =>{
-    let x=0;
+    let x=1;
 
     if(x == 0){
         resolve('Resolved since it is true')
@@ -20,7 +20,7 @@ const promise = new Promise((resolve,reject) =>{
 })
 
 
-promise.then(onFulfillment,onRejection)
+promise.then(onFulfillment).catch(onRejection)
 //1st parameter calls function when promise gets true, 2nd parameter calls function when gets false
 
 

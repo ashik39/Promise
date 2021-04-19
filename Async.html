@@ -1,0 +1,25 @@
+<html>
+
+<h2>ASYNC</h2>
+
+<script>
+    //use async keyword before function declaration 
+    async function greet(){
+        return 'Hello Welcome';
+    }
+    //async returns promise not value
+    console.log(greet())
+
+    //By using arrow function
+    let hello = async () =>{
+        return "Hello arrow function"
+    }
+
+    console.log(hello())
+
+    //by using 'then' we can get value - then executes when promise fulfilled
+    greet().then((value) => console.log(value))
+    hello().then(console.log)
+</script>
+
+</html>
